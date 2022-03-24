@@ -1,0 +1,32 @@
+name: LobbySystem
+version: '${project.version}'
+main: com.zefir.lobbysystem.LobbySystem
+prefix: LS
+authors: [ ZeFiR ]
+description: Lobby system
+website: https://vk.com/public209651016
+
+commands:
+  Help:
+    usage: |
+      Ошибка в команде
+      Использование: /<command>
+    description: Helped
+    permission: com.zefir.help
+    permission-message: У вас нет прав на использование этой команды!
+
+  Config:
+    usage: |
+      Ошибка в команде
+      Использование: /<command>
+    description: Обновление конфига
+    permission: com.zefir.reload
+    permission-message: У вас нет прав на использование этой команды!
+
+  Inventory:
+    usage: |
+      Ошибка в команде
+      Использование: /<command>
+    description: Открывает меню
+    permission: com.zefir.inventory
+    permission-message: У вас нет прав на использование этой команды!
