@@ -15,21 +15,19 @@ public class CustomInventory implements Listener {
     private Plugin plugin = LobbySystem.getPlugin(LobbySystem.class);
 
     public void newInventory(Player player) {
-        Inventory i = plugin.getServer().createInventory(null, 9, ChatColor.DARK_RED + "Menu");
+        byte sizeinv = 9;
+        Inventory i = plugin.getServer().createInventory(null, sizeinv, ChatColor.DARK_RED + "Menu");
+
+        String pnick = player.getName();
 
 
-        ItemStack object1 = new ItemStack(Material.APPLE, 1);
+        ItemStack object1 = new ItemStack(Material.CAKE, 1);
         ItemMeta obmeta1 = object1.getItemMeta();
-        obmeta1.setDisplayName(ChatColor.YELLOW + "TEST");
+        obmeta1.setDisplayName(ChatColor.YELLOW + pnick);
         object1.setItemMeta(obmeta1);
 
-        ItemStack object2 = new ItemStack(Material.CAKE, 1);
-        ItemMeta obmeta2 = object2.getItemMeta();
-        obmeta2.setDisplayName(ChatColor.RED + "TEST2");
-        object2.setItemMeta(obmeta2);
 
         i.setItem(3, object1);
-        i.setItem(5, object2);
         player.openInventory(i);
     }
 
